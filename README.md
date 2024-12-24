@@ -1,2 +1,2 @@
 # IncludeOS_booter
-A remake of the current IncludeOS vmrunner
+An alternative way of booting IncludeOS binaries with QEMU and KVM.
