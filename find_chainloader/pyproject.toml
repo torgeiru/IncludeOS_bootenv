@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools", "wheel", "setuptools_scm"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+
+[project]
+name = "Find_chainloader"
+version = "1.0.0"
+description = "Contains a program that attempts to find the path for the chainloader"
+
+[project.scripts]
+find_chainloader = "find_chainloader:find_chainloader"
