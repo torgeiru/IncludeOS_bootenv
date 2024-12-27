@@ -1,2 +1,2 @@
-# IncludeOS_booter
-A remake of the current IncludeOS vmrunner
+# IncludeOS_bootenv
+An environment for vooting IncludeOS binaries.
