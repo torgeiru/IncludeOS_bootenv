@@ -13,9 +13,4 @@ pkgs.python3.pkgs.buildPythonPackage {
     setuptools
     setuptools-scm
   ];
-
-  meta = {
-    description = "An environment for running IncludeOS binaries";
-    license = pkgs.lib.licenses.gpl3;
-  };
 }

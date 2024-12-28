@@ -1,6 +1,10 @@
+import os
+
+"""
+This code snippet is partly copied from: vmrunner.py within the IncludeOS vmrunner repo.
+
+"""
 def find_chainloader():
-    import os
-    
     chainloader = os.environ.get('INCLUDEOS_CHAINLOADER', None)
     if chainloader is None:
         propagatedBuildInputs = os.environ.get('propagatedBuildInputs', None)

@@ -14,9 +14,4 @@ pkgs.stdenv.mkDerivation {
     find_chainloader
     pkgs.libvirt
   ];
-
-  meta = {
-    description = "An environment for running IncludeOS binaries";
-    license = pkgs.lib.licenses.gpl3;
-  };
 }
