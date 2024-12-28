@@ -1,0 +1,41 @@
+<domain type='kvm' xmlns:qemu='http://libvirt.org/schemas/domain/qemu/1.0'>
+  <!-- Metadata -->
+  <name>IncludeOS-VM0</name>
+  <title>IncludeOS - Development VM for Virtual Filesystem</title>
+  <description>One shared VirtioFS device and nada shared VirtioBLK devices</description>
+
+  <!-- Configuring CPU -->
+  <vcpu placement="static">1</vcpu>
+  <cpu mode="host-passthrough" check="none" migratable="off"/>
+
+  <!-- Features -->
+  <features>
+    <acpi/>
+    <apic/>
+  </features>
+
+  <!-- Configuring memory -->
+  <memory unit="KiB">131072</memory>
+  <currentMemory>131072</currentMemory>
+  
+  <!-- Booting Configuration-->
+  <os>
+    <type arch='x86_64'>hvm</type>
+    <kernel>/nix/store/689phipqspn4ww4gndk2138lwn96k5ic-chainloader-static-i686-unknown-linux-musl-dev/bin/chainloader</kernel> <!-- Change this to the path of your chainloader -->
+    <initrd>/home/torgeirs/Skrivebord/ios_custom_env/dev/result/bin/hello.elf.bin</initrd> <!-- Change this to the path of your IncludeOS binary built with nix-build -->
+  </os>
+
+  <devices>
+    <!-- Redirecting serial stdout to a logfile -->
+    <serial type="file">
+      <source path="/home/torgeirs/Skrivebord/ios_custom_env/log.txt"/> <!-- Change this to where your want to redirect the stdout out the VM -->
+      <target port="0"/>
+    </serial>
+  </devices>
+
+  <!-- Event configuration -->
+  <on_poweroff>destroy</on_poweroff>
+  <on_reboot>restart</on_reboot>
+  <on_crash>restart</on_crash>
+  <on_lockfailure>poweroff</on_lockfailure>
+</domain>
