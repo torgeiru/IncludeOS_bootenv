@@ -1,8 +1,8 @@
 <domain type='kvm' xmlns:qemu='http://libvirt.org/schemas/domain/qemu/1.0'>
   <!-- Metadata -->
   <name>IncludeOS-VM0</name>
-  <title>IncludeOS - Development VM for Virtual Filesystem</title>
-  <description>One shared VirtioFS device and nada shared VirtioBLK devices</description>
+  <title>IncludeOS - Hello World</title>
+  <description>Configuration for booting a basic IncludeOS hello world</description>
 
   <!-- Configuring CPU -->
   <vcpu placement="static">1</vcpu>
