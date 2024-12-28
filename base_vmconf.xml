@@ -33,11 +33,6 @@
     </serial>
   </devices>
 
-  <!-- Turning off audio bloat -->
-  <audio>
-    
-  </audio>
-
   <!-- Event configuration -->
   <on_poweroff>destroy</on_poweroff>
   <on_reboot>restart</on_reboot>
