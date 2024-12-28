@@ -1,4 +1,4 @@
-<domain type='kvm' xmlns:qemu='http://libvirt.org/schemas/domain/qemu/1.0'>
+<domain type='kvm'>
   <!-- Metadata -->
   <name>IncludeOS-VM0</name>
   <title>IncludeOS - Hello World</title>
