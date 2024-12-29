@@ -10,4 +10,4 @@ This environment contains a few things:
 Note: This package should be contained within a NIX environment that contains the IncludeOS MUSL chainloader.
 An example environment is the hello world repo for IncludeOS: [Hello World Repo](https://github.com/includeos/hello_world)
 
-Rationale: I needed a custom environment for booting IncludeOS binaries using Libvirt API. The reasoning is that I needed to handle the creation and destruction of QEMU and VirtioFSD processes. 
+Rationale for creation: I needed a custom environment for booting IncludeOS binaries using Libvirt API. Alternative to modifying the existing vmrunner or having to manually starting a VirtioFSD process.
