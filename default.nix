@@ -13,5 +13,6 @@ pkgs.stdenv.mkDerivation {
   propagatedBuildInputs = [
     find_chainloader
     pkgs.libvirt
+    pkgs.virtiofsd
   ];
 }
